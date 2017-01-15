@@ -18,13 +18,13 @@ Script: {
 	system.includeStandardAdditions = true
 
   //Get process
-	var proc = system.applicationprocesses.byName(procName)
+	var proc = system.applicationProcesses.byName(procName)
 
 	//Get correct window
 	var wnd = proc.windows[wndID]
 	
 	//Notify user that this may take a while
-	app.displayNotification('Gathering GUI Elements from window "' + wndName + '" of process "' + procName + '". This may take a while...', {
+	app.displayNotification('Gathering GUI Elements from window "' + wnd.title() + '" of process "' + procName + '". This may take a while...', {
 	  withTitle: 'Element Scripter',
 	  //subtitle: 'Subtitle',
 	  soundName: 'Sosumi'
@@ -32,17 +32,17 @@ Script: {
 
 	var elements = wnd.entireContents()
 	var a = []
-	var s = "Address|Title|Name|Description|Help|Role|Enabled|Focused|Position|Size"
+	var s = "Address|Title|Name|Description|Help|Role|Enabled|Focused|Position|Size|Value"
 	for(var i=0;i<elements.length;i++){
 		var el = elements[i]
-		s = s + "\n" + [Automation.getDisplayString(el),el.title(),el.name(),el.description(),el.help(),el.role(),el.enabled(),el.focused(),el.position(),el.size()].join("|")
+		s = s + "\n" + [Automation.getDisplayString(el),el.title(),el.name(),el.description(),el.help(),el.role(),el.enabled(),el.focused(),el.position(),el.size(),el.value()].join("|")
 	}
 
 	var textEdit = Application("TextEdit");
 	var newDoc = textEdit.Document().make();
 	newDoc.text = s
 
-	app.displayNotification('Elements from window "' + wndName + '" of process "' + procName + '" have been extracted into text edit.', {
+	app.displayNotification('Elements from window "' + wnd.title() + '" of process "' + procName + '" have been extracted into text edit.', {
 	  withTitle: 'Element Scripter',
 	  soundName: 'Sosumi'
 	})
