@@ -92,10 +92,10 @@ Script: {
 
 	var elements = wnd.entireContents()
 	var a = []
-	var s = "Address|Title|Name|Description|Help|Role|Enabled|Focused|Position|Size"
+	var s = "Address|Title|Name|Description|Help|Role|Enabled|Focused|Position|Size|Value"
 	for(var i=0;i<elements.length;i++){
 		var el = elements[i]
-		s = s + "\n" + [Automation.getDisplayString(el),el.title(),el.name(),el.description(),el.help(),el.role(),el.enabled(),el.focused(),el.position(),el.size()].join("|")
+		s = s + "\n" + [Automation.getDisplayString(el),el.title(),el.name(),el.description(),el.help(),el.role(),el.enabled(),el.focused(),el.position(),el.size(),el.value()].join("|")
 	}
 
 	var textEdit = Application("TextEdit");
