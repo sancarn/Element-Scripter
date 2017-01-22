@@ -14,12 +14,6 @@ Written in JXA for JXA programmers.
 When ElementScripter has finished analysing your software's GUI elements it will create a new TextEdit document with all the GUI elements like this:
 
 ```
-Address|Title|Name|Description|Help|Role|Enabled|Focused|Position|Size
-Application("System Events").applicationProcesses.byName("ScreenFlow").windows.byName("Test2").buttons.at(0)|||close button||AXButton|true|false|38,27|14,16
-Application("System Events").applicationProcesses.byName("ScreenFlow").windows.byName("Test2").buttons.at(1)|||full screen button|this button also has an action to zoom the window|AXButton|true|false|78,27|14,16
-Application("System Events").applicationProcesses.byName("ScreenFlow").windows.byName("Test2").buttons.at(2)|||minimize button||AXButton|true|false|58,27|14,16
-Application("System Events").applicationProcesses.byName("ScreenFlow").windows.byName("Test2").groups.at(0)|||group||AXGroup||false|31,46|1336,1
-Application("System Events").applicationProcesses.byName("ScreenFlow").windows.byName("Test2").buttons.at(3)|||Fast Forward|fast forward|AXButton|true|false|636,810|42,38
 Address|Title|Name|Description|Help|Role|Enabled|Focused|Position|Size|Value
 Application("System Events").applicationProcesses.byName("ScreenFlow").windows.byName("Untitled").buttons.at(0)|||close button||AXButton|true|false|7,26|14,16|
 Application("System Events").applicationProcesses.byName("ScreenFlow").windows.byName("Untitled").buttons.at(1)|||full screen button|this button also has an action to zoom the window|AXButton|true|false|47,26|14,16|
