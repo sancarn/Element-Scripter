@@ -49,7 +49,7 @@ Script: {
             try{
                 p.push(cmds[j](el))
             } catch (e) {
-                p.push("UNK")
+                p.push("'UNK'")
             }
         }
 
