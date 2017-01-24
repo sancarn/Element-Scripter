@@ -57,6 +57,7 @@ Script: {
 	}
 
 	var textEdit = Application("TextEdit");
+	textEdit.activate()
 	var newDoc = textEdit.Document().make();
 	newDoc.text = s
 
