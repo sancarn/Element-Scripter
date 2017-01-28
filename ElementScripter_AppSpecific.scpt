@@ -57,8 +57,8 @@ Script: {
 	}
 
 	var textEdit = Application("TextEdit");
-	textEdit.activate()
 	var newDoc = textEdit.Document().make();
+	textEdit.activate()
 	newDoc.text = s
 
 	app.displayNotification('Elements from window "' + wnd.title() + '" of process "' + procName + '" have been extracted into text edit.', {
